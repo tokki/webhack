@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webhack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    .main {
+      position: relative;
+    }
+    .main #map {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 512px;
+      height: 512px;
+    }
+    .main #radar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 999;
+    }
+  </style>
+  <body>
+    <div class="user-input">
+      input your websocket server:port
+      <br /><br />
+      <input id="server" type="text" placeholder="ws://127.0.0.1:9999" />
+      <button id="btn">run</button>
+      <br />
+      <br />
+    </div>
+    <div class="main">
+      <img src="./img/de_nuke_radar.jpg" id="map" alt="" />
+      <canvas id="radar" width="512" height="512"></canvas>
+    </div>
+  </body>
+  <script src="./webhack.js"></script>
+</html>
